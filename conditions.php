@@ -1,24 +1,28 @@
 <html>
 <?php
   function cleanup_room(){
-    $room_is_filthy = true;
-    if ($room_is_filthy != true) 
-    { 
-        echo "Yuk, la pièce est sale: nettoyons-la!";
-        $room_is_filthy = false;
-        if($room_is_filthy == false)
-        {
-          echo "<br> La chambre est maintenant propre!" ;
-        }
-    } 
-    else 
+    $possible_states = array("Health hazard","filthy", "dirty","clean","CCleaner");
+    $room_filthiness = $possible_states[2];
+    if($possible_states[0] == $room_filthiness)
     {
-        echo "<br> Rien à faire, la chambre est soignée." ; 
+      echo "Yuk, Room is Disgusting! Let's clean it up !";
+    }else if($possible_states[1] == $room_filthiness)
+    {
+      echo "Yuk,Sale sale";
     }
+    else if($possible_states[2] == $room_filthiness)
+    {
+      echo "Yuk,Sale";
+    }
+    else if($possible_states[3] == $room_filthiness)
+    {
+      echo "Yuk,Clear";
+    }else{
 
+        echo "Yuk,Cleaner";
 
-   
+    }
 }
-cleanup_room ();
+cleanup_room();
 ?>
 </html>
