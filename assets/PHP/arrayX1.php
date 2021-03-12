@@ -10,16 +10,20 @@ $me = array(
 'season' => 'summer',
 'soccer' => true,
 'hobbies' => array('manger', 'dormir', 'manger'),
-'mother' => $motherArray
+//'mother' => $motherArray
 );
 
 
-  echo "<pre>";
+ /* echo "<pre>";
   print_r(count($motherArray['hobbies']) +count($me['hobbies']));
   echo "<br>";
   print_r(count($me['hobbies']));
   echo "</pre>";
 
   array_push($me['hobbies'], 'footbl');
-  print_r($me);
+  print_r($me);*/
+  // nouveau tableau avec la valeur a update
+  $updateArray = array('age' => 22);
+  $update =array_replace($me, $updateArray);
+  print_r($update);
 ?>
