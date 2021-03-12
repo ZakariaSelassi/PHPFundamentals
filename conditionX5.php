@@ -1,16 +1,19 @@
 
 <html>
 <?php 
+  $var = "DEHORS TES PAS DE LA TEAM !!";
    if (isset($_GET['age']) and isset($_GET['gender'])) {
      if($_GET['age'] >= 21 AND $_GET['age'] <= 40 AND $_GET['gender'] == 'femal')
      {
-       echo 'WELCOM TO THE TEAM !';
+        $var = "ON EST LA TEAM !";
+        
      }
-     else{
-       echo 'DEHORS TES PAS DE LA TEAM !';
-     }
+
+      
+
    }
-  ?>
+?>
+<p> <?php echo $var. $_GET['gender']; ?> </p>
 
 <form method="get" action="">
 	<label for="age">Age</label>
