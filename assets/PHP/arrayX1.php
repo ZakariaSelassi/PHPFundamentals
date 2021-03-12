@@ -19,4 +19,7 @@ $me = array(
   echo "<br>";
   print_r(count($me['hobbies']));
   echo "</pre>";
+
+  array_push($me['hobbies'], 'footbl');
+  print_r($me);
 ?>
