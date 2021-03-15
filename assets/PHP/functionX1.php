@@ -57,4 +57,19 @@ function replaceAandE($string)
 }
 echo replaceAandE("caecotrophie");
 
+function warning($message , $alert)
+{ 
+
+  if ($alert == "error") {
+      $sentence = "<div class='$alert'>$alert : $message<div>";
+      return $sentence;
+  }else if($alert == "warning")
+  {
+    $sentence = "<div class='$alert'>$alert : $message<div>";
+    return $sentence;
+  }
+
+
+}
+echo warning("Blablablabla","warning");
 ?>
